@@ -1,0 +1,90 @@
+:root { --maroon:#6d1721; --saffron:#d8791d; --gold:#e8b85c; --cream:#fff9ec; --ink:#281a18; --muted:#715f59; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--cream); font-family:"DM Sans",sans-serif; font-size:16px; }
+a { color:inherit; }
+.site-header { height:82px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(22px,6vw,88px); border-bottom:1px solid rgba(109,23,33,.14); position:sticky; top:0; z-index:10; background:rgba(255,249,236,.94); backdrop-filter:blur(12px); }
+.brand { display:flex; gap:12px; align-items:center; font-weight:700; text-decoration:none; color:var(--maroon); }
+.brand-mark { width:39px; height:39px; border-radius:50%; display:grid; place-items:center; color:var(--cream); background:var(--maroon); font-size:22px; }
+nav { display:flex; gap:28px; align-items:center; }
+nav a { text-decoration:none; font-weight:600; font-size:.92rem; }
+.nav-contact { border:1px solid var(--maroon); border-radius:999px; padding:10px 18px; }
+.hero { min-height:650px; display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:60px; padding:84px clamp(22px,8vw,120px); overflow:hidden; background:radial-gradient(circle at 80% 40%,rgba(232,184,92,.3),transparent 28%); }
+.eyebrow { color:var(--saffron); text-transform:uppercase; font-size:.8rem; font-weight:700; letter-spacing:.16em; }
+h1,h2,h3 { font-family:"Yatra One",serif; font-weight:400; margin-top:0; }
+h1 { font-size:clamp(3.4rem,7vw,6.9rem); line-height:.94; margin-bottom:28px; color:var(--maroon); }
+h1 span { color:var(--saffron); }
+.hero-text { max-width:680px; color:var(--muted); font-size:1.2rem; line-height:1.7; }
+.hero-actions { display:flex; gap:14px; margin-top:35px; }
+.button { display:inline-block; padding:14px 24px; border-radius:6px; font-weight:700; text-decoration:none; }
+.primary { background:var(--maroon); color:white; }
+.secondary { border:1px solid var(--maroon); color:var(--maroon); }
+.hero-photo { margin:0; max-width:470px; position:relative; }
+.hero-photo img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 35%; border-radius:48% 48% 18px 18px; box-shadow:18px 18px 0 var(--gold); }
+.hero-photo figcaption { margin:26px 0 0 18px; color:var(--muted); font-size:.85rem; }
+.services { padding:100px clamp(22px,7vw,105px); background:#fffdf7; }
+.section-heading { max-width:720px; margin-bottom:48px; }
+h2 { color:var(--maroon); font-size:clamp(2.5rem,5vw,4rem); line-height:1.08; margin-bottom:14px; }
+.section-heading>p:last-child,.about-copy p { color:var(--muted); line-height:1.7; }
+.service-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; align-items:start; }
+.service-card { border:1px solid rgba(109,23,33,.2); background:white; border-radius:14px; overflow:hidden; scroll-margin-top:100px; }
+.service-card[open] { grid-column:1/-1; }
+.service-card summary { list-style:none; cursor:pointer; display:grid; grid-template-columns:190px 1fr; min-height:245px; }
+.service-card summary::-webkit-details-marker { display:none; }
+.service-card summary>img { width:100%; height:100%; min-height:245px; object-fit:cover; }
+.card-copy { padding:28px; position:relative; }
+.service-number { position:absolute; right:24px; top:22px; color:#ad9b94; font-size:.8rem; }
+.service-symbol { color:var(--saffron); font-family:serif; font-size:1.7rem; margin-bottom:17px; }
+.service-card h3 { color:var(--maroon); font-size:1.75rem; margin-bottom:10px; }
+.service-card p { color:var(--muted); line-height:1.6; }
+.open-label { color:var(--maroon); font-weight:700; display:flex; justify-content:space-between; align-items:center; margin-top:20px; }
+.service-card[open] .open-label b { transform:rotate(45deg); }
+.service-detail { padding:38px clamp(20px,5vw,60px) 48px; border-top:1px solid rgba(109,23,33,.15); background:var(--cream); }
+.service-detail h4 { font-family:"Yatra One",serif; color:var(--maroon); font-size:2rem; margin:28px 0 14px; }
+.checklist-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; margin:0 0 7px; }
+.checklist-progress { color:var(--muted); font-size:.85rem; font-weight:700; }
+.checklist-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+.checklist-actions button { border:1px solid var(--maroon); border-radius:999px; padding:8px 13px; color:white; background:var(--maroon); cursor:pointer; font:700 .78rem "DM Sans",sans-serif; }
+.checklist-actions .clear-button { color:var(--maroon); background:white; }
+.checklist-note { margin:0 0 12px; color:var(--muted); font-size:.78rem; }
+.related-links { display:flex; flex-wrap:wrap; gap:12px; }
+.related-links a,.detail-call { color:var(--maroon); font-weight:700; text-decoration:none; border-bottom:1px solid var(--saffron); }
+.service-note,.coming-soon { max-width:780px; }
+.table-wrap { overflow-x:auto; border:1px solid rgba(109,23,33,.16); border-radius:9px; background:white; }
+table { width:100%; border-collapse:collapse; }
+th,td { padding:13px 16px; text-align:left; border-bottom:1px solid rgba(109,23,33,.11); vertical-align:top; }
+th { background:var(--maroon); color:white; font-size:.85rem; }
+.check-column { width:52px!important; padding-inline:12px; text-align:center; }
+.item-check { width:19px; height:19px; margin:0; accent-color:var(--maroon); cursor:pointer; }
+.checked-row td:not(.check-column) { color:#806f69; text-decoration:line-through; background:#fffaf0; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+th:last-child,td:last-child { width:28%; }
+.optional { display:inline-block; margin-left:8px; padding:2px 7px; border-radius:99px; background:#f4dfaf; color:#6d4218; font-size:.72rem; font-weight:700; text-transform:uppercase; }
+.detail-call { display:inline-block; margin-top:25px; }
+.about { display:grid; grid-template-columns:1fr 1fr; gap:70px; padding:100px clamp(22px,8vw,120px); background:var(--maroon); color:white; }
+.about h2 { color:white; }
+.about-copy p { color:#f4ddd8; font-size:1.12rem; }
+.language-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:25px; }
+.language-list span { padding:8px 15px; border:1px solid rgba(255,255,255,.3); border-radius:999px; }
+.contact { text-align:center; padding:105px 22px; background:linear-gradient(135deg,#f6dfaa,#fff5db); }
+.contact>p:not(.eyebrow) { color:var(--muted); }
+.phone { display:inline-block; margin:20px 0 8px; color:var(--maroon); font-family:"Yatra One",serif; font-size:clamp(2.2rem,5vw,4.5rem); text-decoration:none; }
+.area { font-size:.9rem; }
+footer { display:flex; justify-content:space-between; padding:28px clamp(22px,6vw,88px); color:#ead5d0; background:#3b0e14; font-size:.88rem; }
+.credits { padding:28px clamp(22px,7vw,105px); background:#fffdf7; color:var(--muted); font-size:.82rem; }
+.credits summary { cursor:pointer; color:var(--maroon); font-weight:700; }
+.credits a { color:var(--maroon); }
+.credits li { margin:7px 0; }
+@media (max-width:850px) { nav a:not(.nav-contact){display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:70px}.hero-photo{max-width:380px;margin:auto}.service-grid{grid-template-columns:1fr}.service-card[open]{grid-column:auto}.about{grid-template-columns:1fr;gap:18px} }
+@media (max-width:560px) { .site-header{height:72px}.brand span:last-child{font-size:.9rem}.hero{padding-bottom:65px}.hero-actions{flex-direction:column}.button{text-align:center}.service-card summary{grid-template-columns:1fr}.service-card summary>img{height:210px;min-height:0}.card-copy{padding:24px}.related-links{flex-direction:column;align-items:flex-start}th,td{padding:11px 12px}footer{flex-direction:column;gap:10px;text-align:center} }
+@media (max-width:560px) { .checklist-toolbar{align-items:flex-start;flex-direction:column}.checklist-actions{justify-content:flex-start}.checklist-actions button{padding:7px 10px} }
+@media print {
+  body.printing-checklist .site-header,body.printing-checklist .hero,body.printing-checklist .section-heading,body.printing-checklist .about,body.printing-checklist .contact,body.printing-checklist footer,body.printing-checklist .credits,body.printing-checklist .service-card:not(.print-target),body.printing-checklist .print-target summary,body.printing-checklist .checklist-actions,body.printing-checklist .checklist-note,body.printing-checklist .detail-call { display:none!important; }
+  body.printing-checklist,body.printing-checklist .services,body.printing-checklist .service-grid,body.printing-checklist .print-target,body.printing-checklist .service-detail,body.printing-checklist .table-wrap { display:block; margin:0; padding:0; overflow:visible; border:0; background:white; }
+  body.printing-checklist .print-target { box-shadow:none; }
+  body.printing-checklist .service-detail h4 { margin:0 0 8px; font-size:1.8rem; }
+  body.printing-checklist .service-detail h4::before { content:"Santosh Puja Services — " attr(data-print-title) "\A"; white-space:pre; }
+  body.printing-checklist th { position:static; }
+  body.printing-checklist tr { break-inside:avoid; }
+}
+@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.service-card{transition:none} }
